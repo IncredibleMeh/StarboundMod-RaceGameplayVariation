@@ -1,0 +1,18 @@
+{
+  "name" : "rawfoodheal265",
+	"blockingStat" : "rawfoodhealImmunity",
+  "effectConfig" : {
+    "healAmount" : 265,
+    "emissionRate" : 2.4
+  },
+  "defaultDuration" : 60,
+
+  "scripts" : [
+    "rawfoodheal.lua"
+  ],
+
+  "animationConfig" : "rawfoodheal.animation",
+
+  "label" : "Healing",
+  "icon" : "/interface/statuses/heal.png"
+}

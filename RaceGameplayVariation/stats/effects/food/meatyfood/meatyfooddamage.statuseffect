@@ -1,0 +1,12 @@
+{
+  "name" : "meatyfooddamage",
+  "blockingStat" : "meatyfooddamageImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "meatyfooddamage.lua"
+  ]
+
+}

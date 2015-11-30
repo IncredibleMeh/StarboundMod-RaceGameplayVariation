@@ -1,0 +1,15 @@
+{
+  "name" : "meatyfoodrunboost25",
+	"blockingStat" : "meatyfoodbuffImmunity",
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "meatyfoodrunboost25.lua"
+  ],
+
+  "animationConfig" : "meatyfoodrunboost.animation",
+
+  "label" : "Run Boost",
+  "icon" : "/interface/statuses/haste25.png"
+}

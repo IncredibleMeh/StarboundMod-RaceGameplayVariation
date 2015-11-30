@@ -1,0 +1,15 @@
+{
+  "name" : "metallicfoodmaxenergyboost60",
+	"blockingStat" : "metallicfoodbuffImmunity",
+  "effectConfig" : {
+    "energyAmount" : 60
+  },
+  "defaultDuration" : 60,
+
+  "scripts" : [
+    "metallicfoodmaxenergyboost.lua"
+  ],
+
+  "label" : "Bonus Energy",
+  "icon" : "/interface/statuses/maxenergy.png"
+}

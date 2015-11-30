@@ -1,0 +1,10 @@
+{
+  "name" : "glitchbiology",
+  "effectConfig" : {},
+  "defaultDuration" : 300,
+
+  "scripts" : [
+    "glitchbiology.lua"
+  ]
+
+}

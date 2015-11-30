@@ -1,0 +1,18 @@
+{
+  "name" : "veggiefoodheal145",
+	"blockingStat" : "veggiefoodhealImmunity",
+  "effectConfig" : {
+    "healAmount" : 145,
+    "emissionRate" : 1.4
+  },
+  "defaultDuration" : 60,
+
+  "scripts" : [
+    "veggiefoodheal.lua"
+  ],
+
+  "animationConfig" : "veggiefoodheal.animation",
+
+  "label" : "Healing",
+  "icon" : "/interface/statuses/heal.png"
+}

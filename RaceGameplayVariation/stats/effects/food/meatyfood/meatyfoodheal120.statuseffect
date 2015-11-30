@@ -1,0 +1,18 @@
+{
+  "name" : "meatyfoodheal120",
+	"blockingStat" : "meatyfoodhealImmunity",
+  "effectConfig" : {
+    "healAmount" : 120,
+    "emissionRate" : 1.2
+  },
+  "defaultDuration" : 60,
+
+  "scripts" : [
+    "meatyfoodheal.lua"
+  ],
+
+  "animationConfig" : "meatyfoodheal.animation",
+
+  "label" : "Healing",
+  "icon" : "/interface/statuses/heal.png"
+}

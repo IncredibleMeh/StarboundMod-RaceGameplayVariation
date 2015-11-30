@@ -1,0 +1,18 @@
+{
+  "name" : "meatyfoodenergyregen",
+	"blockingStat" : "meatyfoodbuffImmunity",
+  "effectConfig" : {
+    "regenAmount" : 5,
+    "emissionRate" : 5
+  },
+  "defaultDuration" : 30,
+
+  "scripts" : [
+    "meatyfoodenergyregen.lua"
+  ],
+
+  "animationConfig" : "meatyfoodenergyregen.animation",
+
+  "label" : "Energy Regeneration",
+  "icon" : "/interface/statuses/energyregen.png"
+}

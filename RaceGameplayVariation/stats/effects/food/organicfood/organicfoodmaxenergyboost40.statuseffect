@@ -1,0 +1,15 @@
+{
+  "name" : "organicfoodmaxenergyboost40",
+	"blockingStat" : "organicfoodbuffImmunity",
+  "effectConfig" : {
+    "energyAmount" : 40
+  },
+  "defaultDuration" : 60,
+
+  "scripts" : [
+    "organicfoodmaxenergyboost.lua"
+  ],
+
+  "label" : "Bonus Energy",
+  "icon" : "/interface/statuses/maxenergy.png"
+}

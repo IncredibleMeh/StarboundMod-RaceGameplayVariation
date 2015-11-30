@@ -1,0 +1,15 @@
+{
+  "name" : "metallicfoodrunboost25",
+	"blockingStat" : "metallicfoodbuffImmunity",
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "metallicfoodrunboost25.lua"
+  ],
+
+  "animationConfig" : "metallicfoodrunboost.animation",
+
+  "label" : "Run Boost",
+  "icon" : "/interface/statuses/haste25.png"
+}

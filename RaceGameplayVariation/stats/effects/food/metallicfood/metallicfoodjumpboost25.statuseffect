@@ -1,0 +1,15 @@
+{
+  "name" : "metallicfoodjumpboost25",
+	"blockingStat" : "metallicfoodbuffImmunity",
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "metallicfoodjumpboost25.lua"
+  ],
+
+  "animationConfig" : "metallicfoodjumpboost.animation",
+
+  "label" : "Jump Boost",
+  "icon" : "/interface/statuses/jumpboost25.png"
+}

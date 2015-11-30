@@ -1,0 +1,12 @@
+{
+  "name" : "organicfooddamage",
+  "blockingStat" : "organicfooddamageImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "organicfooddamage.lua"
+  ]
+
+}

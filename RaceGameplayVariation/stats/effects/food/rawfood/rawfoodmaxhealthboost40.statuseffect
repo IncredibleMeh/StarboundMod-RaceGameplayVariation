@@ -1,0 +1,15 @@
+{
+  "name" : "rawfoodmaxhealthboost40",
+	"blockingStat" : "rawfoodbuffImmunity",
+  "effectConfig" : {
+    "healthAmount" : 40
+  },
+  "defaultDuration" : 180,
+
+  "scripts" : [
+    "rawfoodmaxhealthboost.lua"
+  ],
+
+  "label" : "maxhealthboost",
+  "icon" : "/interface/statuses/maxhealth.png"
+}

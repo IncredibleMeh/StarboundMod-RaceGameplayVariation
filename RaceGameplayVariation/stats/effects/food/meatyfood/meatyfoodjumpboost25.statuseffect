@@ -1,0 +1,15 @@
+{
+  "name" : "meatyfoodjumpboost25",
+	"blockingStat" : "meatyfoodbuffImmunity",
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "meatyfoodjumpboost25.lua"
+  ],
+
+  "animationConfig" : "meatyfoodjumpboost.animation",
+
+  "label" : "Jump Boost",
+  "icon" : "/interface/statuses/jumpboost25.png"
+}

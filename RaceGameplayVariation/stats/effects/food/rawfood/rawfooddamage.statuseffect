@@ -1,0 +1,12 @@
+{
+  "name" : "rawfooddamage",
+  "blockingStat" : "rawfooddamageImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "rawfooddamage.lua"
+  ]
+
+}

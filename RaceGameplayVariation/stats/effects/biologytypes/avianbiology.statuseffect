@@ -1,0 +1,10 @@
+{
+  "name" : "avianbiology",
+  "effectConfig" : {"gravityModifier" : 0.6},
+  "defaultDuration" : 300,
+
+  "scripts" : [
+    "avianbiology.lua"
+  ]
+
+}

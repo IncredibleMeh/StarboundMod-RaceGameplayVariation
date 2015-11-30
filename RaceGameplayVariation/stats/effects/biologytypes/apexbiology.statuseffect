@@ -1,0 +1,10 @@
+{
+  "name" : "apexbiology",
+  "effectConfig" : {},
+  "defaultDuration" : 300,
+
+  "scripts" : [
+    "apexbiology.lua"
+  ]
+
+}

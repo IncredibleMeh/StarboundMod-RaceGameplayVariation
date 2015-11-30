@@ -1,0 +1,12 @@
+{
+  "name" : "metallicfooddamage",
+  "blockingStat" : "metallicfooddamageImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "metallicfooddamage.lua"
+  ]
+
+}

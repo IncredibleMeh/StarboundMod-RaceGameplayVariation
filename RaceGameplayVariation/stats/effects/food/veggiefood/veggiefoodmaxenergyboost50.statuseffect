@@ -1,0 +1,15 @@
+{
+  "name" : "veggiefoodmaxenergyboost50",
+	"blockingStat" : "veggiefoodbuffImmunity",
+  "effectConfig" : {
+    "energyAmount" : 50
+  },
+  "defaultDuration" : 60,
+
+  "scripts" : [
+    "veggiefoodmaxenergyboost.lua"
+  ],
+
+  "label" : "Bonus Energy",
+  "icon" : "/interface/statuses/maxenergy.png"
+}

@@ -1,0 +1,15 @@
+{
+  "name" : "organicfoodjumpboost25",
+	"blockingStat" : "organicfoodbuffImmunity",
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "organicfoodjumpboost25.lua"
+  ],
+
+  "animationConfig" : "organicfoodjumpboost.animation",
+
+  "label" : "Jump Boost",
+  "icon" : "/interface/statuses/jumpboost25.png"
+}

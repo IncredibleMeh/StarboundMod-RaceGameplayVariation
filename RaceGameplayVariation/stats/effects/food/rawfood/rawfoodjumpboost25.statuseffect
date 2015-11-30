@@ -1,0 +1,15 @@
+{
+  "name" : "rawfoodjumpboost25",
+	"blockingStat" : "rawfoodbuffImmunity",
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "rawfoodjumpboost25.lua"
+  ],
+
+  "animationConfig" : "rawfoodjumpboost.animation",
+
+  "label" : "Jump Boost",
+  "icon" : "/interface/statuses/jumpboost25.png"
+}

@@ -1,0 +1,15 @@
+{
+  "name" : "metallicfoodmaxhealthboost20",
+	"blockingStat" : "metallicfoodbuffImmunity",
+  "effectConfig" : {
+    "healthAmount" : 20
+  },
+  "defaultDuration" : 180,
+
+  "scripts" : [
+    "metallicfoodmaxhealthboost.lua"
+  ],
+
+  "label" : "maxhealthboost",
+  "icon" : "/interface/statuses/maxhealth.png"
+}

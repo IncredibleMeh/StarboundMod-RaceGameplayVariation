@@ -1,0 +1,15 @@
+{
+  "name" : "veggiefoodrunboost25",
+	"blockingStat" : "veggiefoodbuffImmunity",
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "veggiefoodrunboost25.lua"
+  ],
+
+  "animationConfig" : "veggiefoodrunboost.animation",
+
+  "label" : "Run Boost",
+  "icon" : "/interface/statuses/haste25.png"
+}

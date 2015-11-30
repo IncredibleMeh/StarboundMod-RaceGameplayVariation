@@ -1,0 +1,12 @@
+{
+  "name" : "veggiefooddamage",
+  "blockingStat" : "veggiefooddamageImmunity",
+
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "veggiefooddamage.lua"
+  ]
+
+}

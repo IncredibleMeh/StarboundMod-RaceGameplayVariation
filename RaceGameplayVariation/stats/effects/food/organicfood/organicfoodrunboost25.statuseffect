@@ -1,0 +1,15 @@
+{
+  "name" : "organicfoodrunboost25",
+	"blockingStat" : "organicfoodbuffImmunity",
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "organicfoodrunboost25.lua"
+  ],
+
+  "animationConfig" : "organicfoodrunboost.animation",
+
+  "label" : "Run Boost",
+  "icon" : "/interface/statuses/haste25.png"
+}

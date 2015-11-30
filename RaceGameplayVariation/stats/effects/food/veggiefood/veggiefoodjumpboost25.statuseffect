@@ -1,0 +1,15 @@
+{
+  "name" : "veggiefoodjumpboost25",
+	"blockingStat" : "veggiefoodbuffImmunity",
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "veggiefoodjumpboost25.lua"
+  ],
+
+  "animationConfig" : "veggiefoodjumpboost.animation",
+
+  "label" : "Jump Boost",
+  "icon" : "/interface/statuses/jumpboost25.png"
+}

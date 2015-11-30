@@ -1,0 +1,10 @@
+{
+  "name" : "hylotlbiology",
+  "effectConfig" : {},
+  "defaultDuration" : 300,
+
+  "scripts" : [
+    "hylotlbiology.lua"
+  ]
+
+}

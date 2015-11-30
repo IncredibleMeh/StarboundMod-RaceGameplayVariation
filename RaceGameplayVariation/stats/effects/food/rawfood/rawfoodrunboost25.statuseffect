@@ -1,0 +1,15 @@
+{
+  "name" : "rawfoodrunboost25",
+	"blockingStat" : "rawfoodbuffImmunity",
+  "effectConfig" : {},
+  "defaultDuration" : 5,
+
+  "scripts" : [
+    "rawfoodrunboost25.lua"
+  ],
+
+  "animationConfig" : "rawfoodrunboost.animation",
+
+  "label" : "Run Boost",
+  "icon" : "/interface/statuses/haste25.png"
+}

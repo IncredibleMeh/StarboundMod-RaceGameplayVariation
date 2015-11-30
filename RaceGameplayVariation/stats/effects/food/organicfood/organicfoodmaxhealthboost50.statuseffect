@@ -1,0 +1,15 @@
+{
+  "name" : "organicfoodmaxhealthboost50",
+	"blockingStat" : "organicfoodbuffImmunity",
+  "effectConfig" : {
+    "healthAmount" : 50
+  },
+  "defaultDuration" : 180,
+
+  "scripts" : [
+    "organicfoodmaxhealthboost.lua"
+  ],
+
+  "label" : "Bonus Health",
+  "icon" : "/interface/statuses/maxhealth.png"
+}

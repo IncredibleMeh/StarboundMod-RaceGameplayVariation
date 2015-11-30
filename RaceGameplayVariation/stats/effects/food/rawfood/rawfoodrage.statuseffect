@@ -1,0 +1,17 @@
+{
+  "name" : "rawfoodrage",
+	"blockingStat" : "rawfoodbuffImmunity",
+  "effectConfig" : {
+    "powerModifier" : 0.25
+  },
+  "defaultDuration" : 15,
+
+  "scripts" : [
+    "rawfoodrage.lua"
+  ],
+
+  "animationConfig" : "rawfoodrage.animation",
+
+  "label" : "Rage",
+  "icon" : "/interface/statuses/rage.png"
+}

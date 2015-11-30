@@ -1,0 +1,18 @@
+{
+  "name" : "metallicfoodenergyregen480",
+	"blockingStat" : "metallicfoodbuffImmunity",
+  "effectConfig" : {
+    "regenAmount" : 8,
+    "emissionRate" : 5
+  },
+  "defaultDuration" : 60,
+
+  "scripts" : [
+    "metallicfoodenergyregen.lua"
+  ],
+
+  "animationConfig" : "metallicfoodenergyregen.animation",
+
+  "label" : "Energy Regeneration",
+  "icon" : "/interface/statuses/energyregen.png"
+}

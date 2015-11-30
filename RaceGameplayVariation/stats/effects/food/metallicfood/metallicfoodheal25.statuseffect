@@ -1,0 +1,18 @@
+{
+  "name" : "metallicfoodheal25",
+	"blockingStat" : "metallicfoodhealImmunity",
+  "effectConfig" : {
+    "healAmount" : 25,
+    "emissionRate" : 0.4
+  },
+  "defaultDuration" : 60,
+
+  "scripts" : [
+    "metallicfoodheal.lua"
+  ],
+
+  "animationConfig" : "metallicfoodheal.animation",
+
+  "label" : "Healing",
+  "icon" : "/interface/statuses/heal.png"
+}

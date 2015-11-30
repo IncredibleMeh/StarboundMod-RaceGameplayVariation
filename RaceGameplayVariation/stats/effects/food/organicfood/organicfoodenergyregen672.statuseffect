@@ -1,0 +1,18 @@
+{
+  "name" : "organicfoodenergyregen672",
+	"blockingStat" : "organicfoodbuffImmunity",
+  "effectConfig" : {
+    "regenAmount" : 11.2,
+    "emissionRate" : 5
+  },
+  "defaultDuration" : 60,
+
+  "scripts" : [
+    "organicfoodenergyregen.lua"
+  ],
+
+  "animationConfig" : "organicfoodenergyregen.animation",
+
+  "label" : "Energy Regeneration",
+  "icon" : "/interface/statuses/energyregen.png"
+}

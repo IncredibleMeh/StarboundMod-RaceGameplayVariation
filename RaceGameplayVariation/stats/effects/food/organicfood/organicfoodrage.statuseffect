@@ -1,0 +1,17 @@
+{
+  "name" : "organicfoodrage",
+	"blockingStat" : "organicfoodbuffImmunity",
+  "effectConfig" : {
+    "powerModifier" : 0.25
+  },
+  "defaultDuration" : 15,
+
+  "scripts" : [
+    "organicfoodrage.lua"
+  ],
+
+  "animationConfig" : "organicfoodrage.animation",
+
+  "label" : "Rage",
+  "icon" : "/interface/statuses/rage.png"
+}

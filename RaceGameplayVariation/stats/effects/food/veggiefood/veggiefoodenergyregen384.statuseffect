@@ -1,0 +1,18 @@
+{
+  "name" : "veggiefoodenergyregen384",
+	"blockingStat" : "veggiefoodbuffImmunity",
+  "effectConfig" : {
+    "regenAmount" : 6.4,
+    "emissionRate" : 5
+  },
+  "defaultDuration" : 60,
+
+  "scripts" : [
+    "veggiefoodenergyregen.lua"
+  ],
+
+  "animationConfig" : "veggiefoodenergyregen.animation",
+
+  "label" : "Energy Regeneration",
+  "icon" : "/interface/statuses/energyregen.png"
+}

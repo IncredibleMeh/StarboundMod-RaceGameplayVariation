@@ -1,0 +1,15 @@
+{
+  "name" : "rawfoodmaxenergyboost50",
+	"blockingStat" : "rawfoodbuffImmunity",
+  "effectConfig" : {
+    "energyAmount" : 50
+  },
+  "defaultDuration" : 60,
+
+  "scripts" : [
+    "rawfoodmaxenergyboost.lua"
+  ],
+
+  "label" : "Bonus Energy",
+  "icon" : "/interface/statuses/maxenergy.png"
+}

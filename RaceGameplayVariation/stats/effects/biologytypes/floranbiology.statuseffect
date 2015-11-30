@@ -1,0 +1,10 @@
+{
+  "name" : "floranbiology",
+  "effectConfig" : {},
+  "defaultDuration" : 300,
+
+  "scripts" : [
+    "floranbiology.lua"
+  ]
+
+}

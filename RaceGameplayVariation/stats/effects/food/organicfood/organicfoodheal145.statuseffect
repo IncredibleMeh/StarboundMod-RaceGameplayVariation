@@ -1,0 +1,18 @@
+{
+  "name" : "organicfoodheal145",
+	"blockingStat" : "organicfoodhealImmunity",
+  "effectConfig" : {
+    "healAmount" : 145,
+    "emissionRate" : 1.4
+  },
+  "defaultDuration" : 60,
+
+  "scripts" : [
+    "organicfoodheal.lua"
+  ],
+
+  "animationConfig" : "organicfoodheal.animation",
+
+  "label" : "Healing",
+  "icon" : "/interface/statuses/heal.png"
+}
