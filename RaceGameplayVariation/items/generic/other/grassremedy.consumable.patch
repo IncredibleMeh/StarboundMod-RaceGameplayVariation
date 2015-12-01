@@ -1,0 +1,12 @@
+[
+	{
+		"op" : "add",
+		"path" : "/blockingEffects/-",
+		"value" : "glitchbiology"
+	},
+	{
+		"op" : "add",
+		"path" : "/blockingEffects/-",
+		"value" : "novakidbiology"
+	}
+]
