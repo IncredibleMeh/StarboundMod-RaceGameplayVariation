@@ -1,0 +1,22 @@
+[
+	{
+		"op" : "replace",
+		"path" : "/effects/0/0",
+		"value" : { "effect" : "meatyfoodheal215", "duration" : 60 }
+	},
+	{
+		"op" : "replace",
+		"path" : "/effects/0/1",
+		"value" : { "effect" : "meatyfoodmaxhealthboost20", "duration" : 120 }
+	},
+	{
+		"op" : "add",
+		"path" : "/effects/0/-",
+		"value" : { "effect" : "meatyfooddamage", "duration" : 1 }
+	},
+	{
+		"op" : "add",
+		"path" : "/blockingEffects/-",
+		"value" : "novakidbiology"
+	}
+]
