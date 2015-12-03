@@ -192,8 +192,8 @@ function update(dt)
 	if world.entitySpecies(entity.id()) == "apex" then
 		status.addEphemeralEffect("apexbiology",math.huge)
 		mcontroller.controlModifiers({
-				runModifier = 0.25,
-				jumpModifier = 0.25
+				runModifier = 1.25,
+				jumpModifier = 1.25
 			})
 	end
 	
