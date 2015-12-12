@@ -3,15 +3,9 @@ function init()
 end
 
 function update(dt)
-	if world.entitySpecies(entity.id()) ~= "floran" then
-		mcontroller.controlModifiers({
-				runModifier = 0.125
-			})
-	else
-		mcontroller.controlModifiers({
-				runModifier = 0.25
-			})
-	end
+	mcontroller.controlModifiers({
+			runModifier = 1.25
+		})
 end
 
 function uninit()

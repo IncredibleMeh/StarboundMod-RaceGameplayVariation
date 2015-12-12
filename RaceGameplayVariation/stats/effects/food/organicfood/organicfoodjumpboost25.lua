@@ -6,15 +6,9 @@ end
 function update(dt)
   animator.setParticleEmitterActive("jumpparticles", mcontroller.jumping())
   
-	if world.entitySpecies(entity.id()) ~= "floran" then
-		mcontroller.controlModifiers({
-				jumpModifier = 0.125
-			})
-	else
-		mcontroller.controlModifiers({
-				jumpModifier = 0.25
-			})
-	end
+	mcontroller.controlModifiers({
+			jumpModifier = 1.25
+		})
 end
 
 function uninit()
