@@ -11,7 +11,7 @@
 	},
 	{
 		"op" : "add",
-		"path" : "/blockingEffects/-",
-		"value" : "novakidbiology"
+		"path" : "/blockingEffects",
+		"value" : [ "novakidbiology" ]
 	}
 ]

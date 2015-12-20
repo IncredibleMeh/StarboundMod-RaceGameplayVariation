@@ -2,7 +2,7 @@
 	{
 		"op" : "replace",
 		"path" : "/effects/0/0",
-		"value" : { "effect" : "organicfoodrunboost25", "duration" : 30 }
+		"value" : { "effect" : "organicfoodheal145", "duration" : 60 }
 	},
 	{
 		"op" : "add",
@@ -11,7 +11,7 @@
 	},
 	{
 		"op" : "add",
-		"path" : "/blockingEffects",
-		"value" : [ "novakidbiology" ]
+		"path" : "/blockingEffects/-",
+		"value" : "novakidbiology"
 	}
 ]
