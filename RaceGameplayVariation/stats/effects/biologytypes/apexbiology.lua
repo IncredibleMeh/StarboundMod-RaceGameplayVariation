@@ -2,8 +2,8 @@ function init()
 effect.addStatModifierGroup({
 		{stat = "meatyfooddamageImmunity", amount = 1},
 		
-		{stat = "metallicfoodbuffImmunity", amount = 1}
-		{stat = "metallicfoodhealImmunity", amount = 1}
+		{stat = "metallicfoodbuffImmunity", amount = 1},
+		{stat = "metallicfoodhealImmunity", amount = 1},
 		
 		{stat = "organicfooddamageImmunity", amount = 1},
 		

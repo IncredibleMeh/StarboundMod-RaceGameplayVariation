@@ -2,7 +2,7 @@
 	{
 		"op" : "add",
 		"path" : "/effects/0/-",
-		"value" : { "effect" : "veggiefooddamage", "duration" : 1 }
+		"value" : { "effect" : "rawfooddamage", "duration" : 1 }
 	},
 	{
 		"op" : "add",
@@ -10,3 +10,4 @@
 		"value" : [ "novakidbiology" ]
 	}
 ]
+
