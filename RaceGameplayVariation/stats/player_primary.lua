@@ -256,7 +256,7 @@ function update(dt)
 			status.modifyResourcePercentage("energy", 0.013)
 		elseif world.lightLevel(mouthPosition) > 0.5 then
 			status.modifyResourcePercentage("energy", 0.011)
-		elseif world.lightLevel(mouthPosition) > 0.4 then
+		elseif world.lightLevel(mouthPosition) > 0.45 then
 			status.modifyResourcePercentage("energy", 0.0095)
 		elseif world.lightLevel(mouthPosition) > 0.4 then
 			status.modifyResourcePercentage("energy", 0.008)
@@ -290,7 +290,7 @@ function update(dt)
 			status.modifyResourcePercentage("health", 0.0007)
 		elseif world.lightLevel(mouthPosition) > 0.5 then
 			status.modifyResourcePercentage("health", 0.0006)
-		elseif world.lightLevel(mouthPosition) > 0.4 then
+		elseif world.lightLevel(mouthPosition) > 0.45 then
 			status.modifyResourcePercentage("health", 0.0005)
 		elseif world.lightLevel(mouthPosition) > 0.4 then
 			status.modifyResourcePercentage("health", 0.0004)
