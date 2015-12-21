@@ -8,11 +8,11 @@ function update(dt)
   
 	if world.entitySpecies(entity.id()) ~= "floran" then
 		mcontroller.controlModifiers({
-				jumpModifier = 0.125
+				jumpModifier = 1.125
 			})
 	else
 		mcontroller.controlModifiers({
-				jumpModifier = 0.25
+				jumpModifier = 1.25
 			})
 	end
 end

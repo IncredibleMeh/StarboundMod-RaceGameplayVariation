@@ -12,8 +12,8 @@ function update(dt)
 	if world.entitySpecies(entity.id()) ~= "novakid" then
 		if world.entitySpecies(entity.id()) ~= "glitch" then
 			mcontroller.controlModifiers({
-					runModifier = -0.4,
-					jumpModifier = -0.4
+					runModifier = 0.6,
+					jumpModifier = 0.6
 				})
 
 			status.modifyResourcePercentage("energy", -self.degen * dt)

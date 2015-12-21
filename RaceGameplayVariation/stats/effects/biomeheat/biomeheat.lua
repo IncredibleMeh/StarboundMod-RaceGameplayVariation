@@ -18,8 +18,8 @@ end
 function update(dt)
 	if world.entitySpecies(entity.id()) ~= "glitch" then
 		mcontroller.controlModifiers({
-				runModifier = -0.3,
-				jumpModifier = -0.7
+				runModifier = 0.7,
+				jumpModifier = 0.3
 			})
 	end
 
