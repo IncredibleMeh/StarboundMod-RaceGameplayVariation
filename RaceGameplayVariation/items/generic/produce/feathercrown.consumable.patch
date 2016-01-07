@@ -6,7 +6,7 @@
 	},
 	{
 		"op" : "replace",
-		"path" : "/effects/0/0",
+		"path" : "/effects/0/1",
 		"value" : { "effect" : "veggiefoodmaxhealthboost10", "duration" : 105 }
 	},
 	{
