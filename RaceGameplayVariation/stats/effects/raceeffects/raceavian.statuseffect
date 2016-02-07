@@ -1,0 +1,10 @@
+{
+  "name" : "raceavian",
+  "effectConfig" : {"gravityModifier" : 0.6},
+  "defaultDuration" : 300,
+
+  "scripts" : [
+    "raceavian.lua"
+  ]
+
+}

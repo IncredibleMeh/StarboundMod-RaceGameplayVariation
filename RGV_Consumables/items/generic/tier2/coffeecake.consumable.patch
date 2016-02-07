@@ -1,0 +1,27 @@
+[
+	{
+		"op" : "replace",
+		"path" : "/effects/0/0",
+		"value" : { "effect" : "organicfoodrunboost25", "duration" : 30 }
+	},
+	{
+		"op" : "replace",
+		"path" : "/effects/0/1",
+		"value" : { "effect" : "organicfoodheal170", "duration" : 60 }
+	},
+	{
+		"op" : "replace",
+		"path" : "/effects/0/1",
+		"value" : { "effect" : "organicfoodheal20", "duration" : 120 }
+	},
+	{
+		"op" : "add",
+		"path" : "/effects/0/-",
+		"value" : { "effect" : "organicfooddamage", "duration" : 1 }
+	},
+	{
+		"op" : "add",
+		"path" : "/blockingEffects/-",
+		"value" : "racenovakid"
+	}
+]

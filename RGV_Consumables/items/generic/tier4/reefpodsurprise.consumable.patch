@@ -1,0 +1,22 @@
+[
+	{
+		"op" : "replace",
+		"path" : "/effects/0/0",
+		"value" : { "effect" : "rawfoodmaxhealthboost50", "duration" : 120 }
+	},
+	{
+		"op" : "replace",
+		"path" : "/effects/0/1",
+		"value" : { "effect" : "rawfoodmaxenergyboost10", "duration" : 120 }
+	},
+	{
+		"op" : "add",
+		"path" : "/effects/0/-",
+		"value" : { "effect" : "rawfooddamage", "duration" : 1 }
+	},
+	{
+		"op" : "add",
+		"path" : "/blockingEffects/-",
+		"value" : "racenovakid"
+	}
+]

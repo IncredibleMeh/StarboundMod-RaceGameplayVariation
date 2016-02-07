@@ -1,0 +1,10 @@
+{
+  "name" : "racefloran",
+  "effectConfig" : {},
+  "defaultDuration" : 300,
+
+  "scripts" : [
+    "racefloran.lua"
+  ]
+
+}

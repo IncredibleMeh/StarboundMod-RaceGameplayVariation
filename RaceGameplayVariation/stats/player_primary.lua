@@ -3,6 +3,7 @@ function init()
   self.lastYVelocity = 0
   self.fallDistance = 0
   self.hitInvulnerabilityTime = 0
+	self.shieldHitInvulnerabilityTime = 0
   self.damageFlashTime = 0
   self.suffocateSoundTimer = 0
 
@@ -24,22 +25,7 @@ function applyDamageRequest(damageRequest)
   end
 
   local damage = 0
-  
-	if damageRequest.damageSourceKind == "electric" and world.entitySpecies(entity.id()) == "glitch" 
-	or damageRequest.damageSourceKind == "electricaxe" and world.entitySpecies(entity.id()) == "glitch" 
-	or damageRequest.damageSourceKind == "electricbarrier" and world.entitySpecies(entity.id()) == "glitch" 
-	or damageRequest.damageSourceKind == "electricbroadsword" and world.entitySpecies(entity.id()) == "glitch" 
-	or damageRequest.damageSourceKind == "electricdagger" and world.entitySpecies(entity.id()) == "glitch" 
-	or damageRequest.damageSourceKind == "electrichammer" and world.entitySpecies(entity.id()) == "glitch" 
-	or damageRequest.damageSourceKind == "electricplasma" and world.entitySpecies(entity.id()) == "glitch" 
-	or damageRequest.damageSourceKind == "electricshortsword" and world.entitySpecies(entity.id()) == "glitch" 
-	or damageRequest.damageSourceKind == "electricspear" and world.entitySpecies(entity.id()) == "glitch" then
-		if damageRequest.damageType == "Damage" or damageRequest.damageType == "Knockback" then --Glitch electric damage request
-			damage = damage + root.evalFunction2("protection", damageRequest.damage, status.stat("protection")) * 2
-		elseif damageRequest.damageType == "IgnoresDef" then
-			damage = damage + damageRequest.damage * 2
-		end
-	elseif damageRequest.damageType == "Damage" or damageRequest.damageType == "Knockback" then --Normal damage request
+  if damageRequest.damageType == "Damage" or damageRequest.damageType == "Knockback" then
     damage = damage + root.evalFunction2("protection", damageRequest.damage, status.stat("protection"))
   elseif damageRequest.damageType == "IgnoresDef" then
     damage = damage + damageRequest.damage
@@ -52,14 +38,21 @@ function applyDamageRequest(damageRequest)
   end
 
   if damageRequest.hitType == "ShieldHit" then
-    if not status.resourcePositive("perfectBlock") then
-      status.modifyResource("shieldStamina", -damage / status.stat("shieldHealth"))
-    end
-    status.setResourcePercentage("shieldStaminaRegenBlock", 1.0)
-    damage = 0
-    damageRequest.statusEffects = {}
-  end
+    if self.shieldHitInvulnerabilityTime == 0 then
+      local preShieldDamageHealthPercentage = damage / status.resourceMax("health")
+      self.shieldHitInvulnerabilityTime = status.statusProperty("shieldHitInvulnerabilityTime") * math.min(preShieldDamageHealthPercentage, 1.0)
 
+      if not status.resourcePositive("perfectBlock") then
+        status.modifyResource("shieldStamina", -damage / status.stat("shieldHealth"))
+      end
+    end
+
+		status.setResourcePercentage("shieldStaminaRegenBlock", 1.0)
+		damage = 0
+		damageRequest.statusEffects = {}
+		damageRequest.damageSourceKind = "shield"
+	end
+		
   local damageHealthPercentage = damage / status.resourceMax("health")
 
   if damage > 0 and damageRequest.damageType ~= "Knockback" then
@@ -87,8 +80,8 @@ function applyDamageRequest(damageRequest)
     end
   end
 
-	--Novakid death explosion
-	if not status.resourcePositive("health") and world.entitySpecies(entity.id()) == "novakid" then
+	--Explode on death
+	if not status.resourcePositive("health") and status.statPositive("explosionDeath") then
 		world.spawnProjectile("zbomb", mcontroller.position(), 0, {0, 0}, false, { timeToLive = 0 })
 	end
 	
@@ -118,16 +111,16 @@ function update(dt)
   local gravityDiffFactor = 1 / 30.0
 
 	-- Adjusts avian fall damage
-	if world.entitySpecies(entity.id()) == "avian" then
-		local minimumFallDistance = 21
-		local minimumFallVel = 60
-	end
+--	if world.entitySpecies(entity.id()) == "avian" then
+--		local minimumFallDistance = 21
+--		local minimumFallVel = 60
+--	end
 	
 	-- Adjusts apex fall damage
-	if world.entitySpecies(entity.id()) == "apex" then
-		local minimumFallDistance = 17.5
-		local minimumFallVel = 50
-	end
+--	if world.entitySpecies(entity.id()) == "apex" then
+--		local minimumFallDistance = 17.5
+--		local minimumFallVel = 50
+--	end
 	
   local curYPosition = mcontroller.yPosition()
   local yPosChange = curYPosition - (self.lastYPosition or curYPosition)
@@ -156,12 +149,54 @@ function update(dt)
   self.lastYPosition = curYPosition
   self.lastYVelocity = curYVelocity
 
+	--Human
+	if world.entitySpecies(entity.id()) == "human" then
+		status.addEphemeralEffect("racehuman",math.huge)
+	end
+	
+	--Avian
+	if world.entitySpecies(entity.id()) == "avian" then
+		status.addEphemeralEffect("raceavian",math.huge)
+	end
+
+	--Apex
+	if world.entitySpecies(entity.id()) == "apex" then
+		status.addEphemeralEffect("raceapex",math.huge)
+		mcontroller.controlModifiers({
+				runModifier = 1.25,
+				jumpModifier = 1.25
+			})
+	end
+	
+	--Floran
+	if world.entitySpecies(entity.id()) == "floran" then
+		status.addEphemeralEffect("racefloran",math.huge)
+	end
+	
+	--Hylotl
+	if world.entitySpecies(entity.id()) == "hylotl" then
+		status.addEphemeralEffect("racehylotl",math.huge)
+	end
+	
+	--Glitch
+	if world.entitySpecies(entity.id()) == "glitch" then
+		status.addEphemeralEffect("raceglitch",math.huge)
+		mcontroller.controlModifiers({
+				runModifier = .90,
+				jumpModifier = .75
+			})
+	end
+	
+	--Novakid
+	if world.entitySpecies(entity.id()) == "novakid" then
+		status.addEphemeralEffect("racenovakid",math.huge)
+		status.addEphemeralEffect("xenonglow",math.huge)
+	end
+	
   local mouthPosition = vec2.add(mcontroller.position(), status.statusProperty("mouthPosition"))
-  if status.statPositive("breathProtection") 
-	or world.breathable(mouthPosition) 
-	or world.entitySpecies(entity.id()) == "glitch" --Glitch breath changes
-	or world.entitySpecies(entity.id()) == "novakid" --Novakid breath changes
-	or world.entitySpecies(entity.id()) == "hylotl" and world.liquidAt(mouthPosition) then --Hylotl breath changes
+  if status.statPositive("breathProtection") or world.breathable(mouthPosition) 
+	or status.statPositive("waterbreathProtection") and world.liquidAt(mouthPosition) 
+	then
     status.modifyResource("breath", status.stat("breathRegenerationRate") * dt)
   else
     status.modifyResource("breath", -status.stat("breathDepletionRate") * dt)
@@ -177,46 +212,6 @@ function update(dt)
   else
     self.suffocateSoundTimer = 0
   end
-
-	--Human stat trigger
-	if world.entitySpecies(entity.id()) == "human" then
-		status.addEphemeralEffect("humanbiology",math.huge)
-	end
-	
-	--Avian stat trigger
-	if world.entitySpecies(entity.id()) == "avian" then
-		status.addEphemeralEffect("avianbiology",math.huge)
-	end
-	
-	--Apex stat trigger
-	if world.entitySpecies(entity.id()) == "apex" then
-		status.addEphemeralEffect("apexbiology",math.huge)
-		mcontroller.controlModifiers({
-				runModifier = 1.25,
-				jumpModifier = 1.25
-			})
-	end
-	
-	--Floran stat trigger
-	if world.entitySpecies(entity.id()) == "floran" then
-		status.addEphemeralEffect("floranbiology",math.huge)
-	end
-	
-	--Hylotl stat trigger
-	if world.entitySpecies(entity.id()) == "hylotl" then
-		status.addEphemeralEffect("hylotlbiology",math.huge)
-	end
-	
-	--Glitch stat trigger
-	if world.entitySpecies(entity.id()) == "glitch" then
-		status.addEphemeralEffect("glitchbiology",math.huge)
-	end
-	
-	--Noavkid stat trigger
-	if world.entitySpecies(entity.id()) == "novakid" then
-		status.addEphemeralEffect("novakidbiology",math.huge)
-		status.addEphemeralEffect("xenonglow",math.huge)
-	end
 	
   self.hitInvulnerabilityTime = math.max(self.hitInvulnerabilityTime - dt, 0)
   local flashTime = status.statusProperty("hitInvulnerabilityFlash")
@@ -245,7 +240,7 @@ function update(dt)
     status.setResourceLocked("energy", false)
   end
 
-  if not status.resourcePositive("energyRegenBlock") and world.entitySpecies(entity.id()) == "floran" then --Floran energy regen
+  if not status.resourcePositive("energyRegenBlock") and status.resourcePositive("energylightRegen") then --Light-based energy regen
 		if world.lightLevel(mouthPosition) > 0.7 then
 			status.modifyResourcePercentage("energy", 0.019)
 		elseif world.lightLevel(mouthPosition) > 0.65 then
@@ -277,13 +272,14 @@ function update(dt)
     status.modifyResourcePercentage("energy", status.stat("energyRegenPercentageRate") * dt)
   end
 
+	self.shieldHitInvulnerabilityTime = math.max(self.shieldHitInvulnerabilityTime - dt, 0)
   if not status.resourcePositive("shieldStaminaRegenBlock") then
     status.modifyResourcePercentage("shieldStamina", status.stat("shieldStaminaRegen") * dt)
     status.modifyResourcePercentage("perfectBlockLimit", status.stat("perfectBlockLimitRegen") * dt)
   end
 	
-	--Floran health regen
-	if world.entitySpecies(entity.id()) == "floran" then
+	--Light-based health regen
+	if status.resourcePositive("healthlightRegen") then
 		if world.lightLevel(mouthPosition) > 0.6 then
 			status.modifyResourcePercentage("health", 0.0008)
 		elseif world.lightLevel(mouthPosition) > 0.55 then
