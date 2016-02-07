@@ -1,0 +1,10 @@
+{
+  "name" : "raceglitch",
+  "effectConfig" : {},
+  "defaultDuration" : 300,
+
+  "scripts" : [
+    "raceglitch.lua"
+  ]
+
+}

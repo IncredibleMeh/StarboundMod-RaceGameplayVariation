@@ -1,0 +1,10 @@
+{
+  "name" : "racehylotl",
+  "effectConfig" : {},
+  "defaultDuration" : 300,
+
+  "scripts" : [
+    "racehylotl.lua"
+  ]
+
+}

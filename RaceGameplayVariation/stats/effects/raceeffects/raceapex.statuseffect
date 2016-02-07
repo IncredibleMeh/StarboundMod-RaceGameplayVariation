@@ -1,0 +1,10 @@
+{
+  "name" : "raceapex",
+  "effectConfig" : {},
+  "defaultDuration" : 300,
+
+  "scripts" : [
+    "raceapex.lua"
+  ]
+
+}

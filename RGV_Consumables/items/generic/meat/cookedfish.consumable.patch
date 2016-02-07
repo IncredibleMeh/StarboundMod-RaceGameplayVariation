@@ -1,0 +1,17 @@
+[
+	{
+		"op" : "replace",
+		"path" : "/effects/0/0",
+		"value" : { "effect" : "meatyfoodheal135", "duration" : 60 }
+	},
+	{
+		"op" : "add",
+		"path" : "/effects/0/-",
+		"value" : { "effect" : "meatyfooddamage", "duration" : 1 }
+	},
+	{
+		"op" : "add",
+		"path" : "/blockingEffects/-",
+		"value" : "racenovakid"
+	}
+]

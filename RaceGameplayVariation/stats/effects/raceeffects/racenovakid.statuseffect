@@ -1,0 +1,10 @@
+{
+  "name" : "racenovakid",
+  "effectConfig" : {},
+  "defaultDuration" : 300,
+
+  "scripts" : [
+    "racenovakid.lua"
+  ]
+
+}
