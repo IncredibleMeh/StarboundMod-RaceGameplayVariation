@@ -12,6 +12,6 @@
 	{
 		"op" : "add",
 		"path" : "/blockingEffects",
-		"value" : [ "novakidbiology" ]
+		"value" : [ "wellfed", "novakidbiology" ]
 	}
 ]

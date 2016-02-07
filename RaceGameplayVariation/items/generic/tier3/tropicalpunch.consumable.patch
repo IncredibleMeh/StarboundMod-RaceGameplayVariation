@@ -6,17 +6,17 @@
 	},
 	{
 		"op" : "replace",
-		"path" : "/effects/0/0",
+		"path" : "/effects/0/1",
 		"value" : { "effect" : "veggiefoodjumpboost25", "duration" : 120 }
 	},
 	{
 		"op" : "replace",
-		"path" : "/effects/0/1",
+		"path" : "/effects/0/2",
 		"value" : { "effect" : "veggiefoodrunboost25", "duration" : 120 }
 	},
 	{
 		"op" : "replace",
-		"path" : "/effects/0/2",
+		"path" : "/effects/0/3",
 		"value" : { "effect" : "veggiefoodmaxenergyboost30", "duration" : 165 }
 	},
 	{
